@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link href="/static/styles.css" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@200;300&family=Roboto:wght@300;400;500;700;900&
+        family=Rubik:wght@300;500;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <title>
+            {% block title %}{% endblock %}
+        </title>
+    </head>
+    <body>
+        <header class="welcome-header">
+            <div class="welcome-navbar">
+                <div class="logo-container-home">
+                    <a href="/homepage"><img class=logo-image src="/static/logo.png" alt="Logo"></a>
+                    <h4 class="logo"><a class="logo-link" href="/homepage">Loyal T</a></h4>
+                </div>
+                <nav class="nav-div">
+                    <div>
+                        <ul class="nav-links">
+                            <li><a class="nav-link" href="/homepage">Home</a></li>
+                            <li><a class="nav-link" href="/enter-sale">Enter Sale</a></li>
+                            <li><a class="nav-link" href="/new-promotion">New Promotion</a></li>
+                        </ul>
+                    </div>
+                </nav>
+                <ul class="log-out">
+                    <form action="/">
+                        <button class="log-out-button" type="submit">Log Out</button>
+                    </form>
+                </ul>
+            </div>
+        </header>
+        <main>
+            {% with messages = get_flashed_messages(with_categories=true) %}
+                {% if messages %}
+                    {% for category, message in messages %}
+                        <div class="alert alert-{{ category }}" role="alert">
+                            {{ message }}
+                        </div>
+                    {% endfor %}
+                {% endif %}
+            {% endwith %}
+            {% block main %}{% endblock %}
+        </main>
+    </body>
+</html>

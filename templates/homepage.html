@@ -1,0 +1,45 @@
+{% extends "layout-inside.html" %}
+
+{% block title %}
+    Home
+{% endblock %}
+
+{% block main %}
+    {% if not promotion_list %}
+        <div class="empty">
+            <img src="/static/travolta-confused-still.jpg" alt="Travolta confused meme" class="travolta">
+            <p class="empty-text">You don't have any promotions yet! Click on the "New Promotion" tab to get started!</p>
+        </div>
+    {% else %}
+        <h1 class="my-promotions-head">My Promotions</h1>
+        <div class="my-promotions">
+            <table class="promotions-table">
+                <thead>
+                    <tr>
+                        <th>Promotion Name</th>
+                        <th>Start Date</th>
+                        <th>End Date</th>
+                        <th>Reward</th>
+                        <th>Purchases Needed</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for item in promotion_list %}
+                        <tr>
+                            <form method="post" action="/view-more/<promo-name>">
+                                <td>{{ item['promotion_name'] }}</td>
+                                <input type="hidden" name="promo-name" value="{{ item['promotion_name'] }}" />
+                                <td>{{ item['start_date'] }}</td>
+                                <td>{{ item['end_date'] }}</td>
+                                <td>{{ item['reward'] }}</td>
+                                <td>{{ item['purchase_number'] }}</td>
+                                <td><button type="submit" id="view-more-button">View</button></td>
+                            </form>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    {% endif %}
+{% endblock %}

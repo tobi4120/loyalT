@@ -1,0 +1,27 @@
+{% extends "layout-inside.html" %}
+
+{% block title %}
+    New Promotion
+{% endblock %}
+
+{% block main %}
+    <h1 class="new-promotion-header">New Promotion</h1>
+    <div class="new-promotion">
+        <form id="new-promotion" action="/new-promotion" method="post">
+            <label for="promotion-name" class="new-promotion-label">Promotion name:</label>
+            <input type="text" id="promotion-name" name="promotion-name" class="new-promotion-content" autocomplete="off" required><br><br>
+            <label for="start-date" class="new-promotion-label">From:</label>
+            <input type="date" id="start-date" name="start-date" class="new-promotion-content" required>
+            <label for="end-date" class="new-promotion-label">To:</label>
+            <input type="date" id="end-date" name="end-date" class="new-promotion-content" required><br><br>
+            <label for="reward-number" class="new-promotion-label">Reward after every </label>
+            <input type="number" id="reward-number" name="reward-number" class="new-promotion-content" min='1' max='10000' required><p
+            class="new-promotion-label purchases"> purchases</p><br><br>
+            <label for="rewards" class="new-promotion-label">Describe the reward:</label>
+            <textarea id="rewards" name="rewards" class="new-promotion-content" cols="1" rows="2" required></textarea><br>
+            <div class="create-promotion-div">
+                <button type="submit" id="create-promotion">Create Promotion</button>
+            </div>
+        </form>
+    </div>
+{% endblock %}

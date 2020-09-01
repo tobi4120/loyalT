@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link href="/static/styles.css" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@200;300&family=Roboto:wght@100;300;400;500;700;900&
+        family=Rubik:wght@300;500;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <title>
+            Log In
+        </title>
+    </head>
+    <body>
+        {% if get_flashed_messages() %}
+            <div class="alert alert-danger" role="alert">
+                {{ get_flashed_messages()[0] }}
+            </div>
+        {% endif %}
+        <header>
+            <div class="login-navbar">
+                <div class="logo-container">
+                    <a href="/"><img src="/static/logo.png" style="width:60px;height:60px;" alt="Logo"></a>
+                    <h4 class="logo"><a class="logo-link" href="/">Loyal T</a></h4>
+                </div>
+                <nav>
+                    <ul class="nav-links">
+                        <li><a class="nav-link x" href="/">X</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <main>
+            <div class="login">
+                <h1 class="login-header"> Log In</h1>
+                <p class="login-sub-header">Don't have an account? <a class="login-sub-hedaer-link" href="/signup">Sign Up</a></p>
+                <form class="login_form" action="/login" method="post">
+                    <input class="username" autocomplete="off" name="username" placeholder="Username" type="text" required>
+                    <br>
+                    <br>
+                    <input class="password" name="password" placeholder="Password" type="password" required>
+                    <br>
+                    <br>
+                    <button class="login-button" type="submit">Log In</button>
+                </form>
+            </div>
+        </main>
+    </body>
+</html>

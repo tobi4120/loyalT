@@ -1,0 +1,26 @@
+{% extends "layout-inside.html" %}
+
+{% block title %}
+    Enter Sale
+{% endblock %}
+
+{% block main %}
+    <h1 class="new-promotion-header">Enter Sale</h1>
+    <div class="new-promotion">
+        <form id="enter-sale" name="enter-sale" action="/enter-sale" method="post">
+            <label for="customer-email-list" class="new-promotion-label">Customer email:</label>
+            <input id='customer-email-list' name='customer-email-list' list="customer-email-datalist" class = "enter-sale-input" Add autocomplete="off"
+            required>
+            <datalist id='customer-email-datalist'>
+                {% for email in customer_emails %}
+                    <option value={{ email['customer_email'] }}>
+                {% endfor %}
+            </datalist><br><br>
+            <label id="sales-price-label" for="sale-price" class="new-promotion-label">Sale price:</label>
+            $<input id='sale-price' name='sale-price' type='number' class = "enter-sale-input" min="0.01" max="10000" step="0.01" required>
+            <div class="create-promotion-div">
+                <button type="submit" id="create-promotion">Enter Sale</button>
+            </div>
+        </form>
+    </div>
+{% endblock %}

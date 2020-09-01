@@ -1,0 +1,85 @@
+{% extends "layout-inside.html" %}
+
+{% block title %}
+    {{promoname}}
+{% endblock %}
+
+{% block main %}
+    <div class="view-more-div">
+        <h1 class="promotion-name-head">{{ promoname }}</h1>
+        <h3 class="view-more-promo-dates">{{ promotion_data[0]['start_date'] }} to {{ promotion_data[0]['end_date'] }}</h3>
+        {% if not customer_list %}
+            <div class="empty">
+                <img src="/static/travolta-confused-still.jpg" alt="Travolta confused meme" class="travolta">
+                <p class="empty-text">No customers yet! Click the "Add customer" button to get started!</p>
+            </div>
+        {% else %}
+            {% if transactions |length > 0 %}
+                {% if transaction_total !=0 %}
+                    <img src="/static/new_plot.png" class="sales-graph">
+                {% endif %}
+            {% endif %}
+            <div class="my-customers">
+                <table class="customers-table">
+                    <thead>
+                        <tr>
+                            <th>Customer Name</th>
+                            <th>Customer Email</th>
+                            <th>Total Purchases</th>
+                            <th>Total Amount Spent</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for item in customer_list %}
+                            <tr>
+                                <td>{{ item['customer_name'] }}</td>
+                                <td>{{ item['customer_email'] }}</td>
+                                <td>{% if item['transactions'] == 0 %}
+                                        None
+                                    {% else %}
+                                        {{ item['transactions'] }}
+                                    {% endif %}
+                                </td>
+                                <td>{% if item['purchase_amount']==0 %}
+                                        $0
+                                    {% else %}
+                                        ${{ '{:,.2f}'.format(item['purchase_amount']) }}
+                                    {% endif %}
+                                </td>
+                            </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+            {% endif %}
+
+        <div class="add-customer-open-dialog-button">
+                <button type="submit" id="add-customer-open-dialog">Add Customer</button><br><br>
+            <form method="post" action="/delete">
+                <input type="hidden" name="promo-name3" value="{{promoname}}">
+                <button type="submit" id="delete-promotion" class="delete-promotion">Delete Promotion</button>
+            </form>
+        </div>
+
+        <div class="add-customer-modal">
+            <div class="add-customer-close">
+                +
+            </div>
+            <form method="post" action="/view-more/<promo-name>">
+                <h1 class="add-customer-title">Add Customer</h1>
+                <input type=text id="customer-name" name="customer-name" class="add-customer-input" autocomplete="off"
+                placeholder="Customer Name" required><br><br>
+                <input type=text id="customer-email" name="customer-email" class="add-customer-input" autocomplete="off"
+                placeholder="Customer Email" required><br><br>
+                <input type=text id="confirm-email" name="confirm-email" class="add-customer-input" autocomplete="off"
+                placeholder="Confirm Email" required><br><br>
+                <input type="hidden" name="promo-name2" value="{{promoname}}">
+                <div>
+                    <button type="submit" id="add-customer-button">Add Customer</button>
+                </div>
+            </form>
+        </div>
+        <div id="overlay">
+        <script type="text/javascript" src="/static/add-customer.js"></script>
+    </div>
+{% endblock %}

@@ -1,0 +1,570 @@
+*
+{
+    margin: 0px;
+    padding: 0px;
+}
+
+.welcome-navbar
+{
+    display: flex;
+    width: 95%;
+    margin: auto;
+    height: 10vh;
+    align-items: center;
+}
+
+.welcome-header
+{
+    border-bottom-style: solid;
+    border-bottom-color: #dddddd;
+    border-bottom-width: 1px;
+}
+
+.logo-container, .nav-links, .logo-container-home
+{
+    display: flex;
+    list-style: none;
+    margin-bottom: 0;
+}
+
+.logo-container
+{
+    flex: 1;
+}
+
+.logo
+{
+    font-weight: 500;
+    margin: 4px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 26px;
+    align-self: center;
+}
+
+.logo-image
+{
+    vertical-align: middle;
+    width:60px;
+    height:60px;
+}
+
+.logo-link
+{
+    text-decoration: none;
+    color: #0abfaf;
+}
+
+.logo-link:hover
+{
+    text-decoration: none;
+    color: #0abfaf;
+}
+
+.nav-link
+{
+    margin: 10px;
+    color: #1c1a1a;
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+}
+
+.nav-div
+{
+    flex:1;
+}
+
+.log-out
+{
+    margin:auto;
+    list-style-type: none;
+}
+
+.welcome
+{
+    display: flex;
+    width: 95%;
+    margin: auto;
+    padding: 30px;
+    align-items: center;
+    background: #fafafa;
+    height: 81vh;
+    font-family: 'Roboto', sans-serif;
+}
+
+.welcome_content
+{
+    padding: 20px;
+    color: #1c1a1a;
+}
+
+.welcome_header
+{
+    font-size: 45px;
+    font-family: ArcaMajora3-Bold, sans-serif;
+    line-height: 37pt;
+}
+
+.welcome_sub_header
+{
+    font-size: 20px;
+    font-weight: 100;
+    font-family: 'Raleway', sans-serif;
+}
+
+.get_started
+{
+    font-size: 20px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    background: #0abfaf;
+    color: white;
+    border: 0.5px solid;
+    border-radius: 18px;
+    padding: 10px 40px;
+    outline: none;
+}
+
+.nav-link:hover
+{
+    color: #0abfaf;
+}
+
+.login-navbar
+{
+    display: flex;
+    width: 90%;
+    margin: auto;
+    height: 20vh;
+    align-items: center;
+}
+
+.x
+{
+    font-size: 35px;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 200;
+    color: #1c1a1a
+}
+
+.login, .signup
+{
+    position: absolute;
+    top: 38%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+}
+
+.signup
+{
+    top: 42%;
+}
+
+.login-header, .signup-header
+{
+    font-size: 55px;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 200;
+    color: #1c1a1a;
+    padding: 15px;
+}
+
+.login-sub-header, .signup-sub-header
+{
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    font-weight: 300;
+    padding-bottom: 30px;
+}
+
+.login-sub-hedaer-link, .signup-sub-hedaer-link
+{
+    color: #0abfaf;
+    text-decoration: none;
+}
+
+.login-sub-hedaer-link:hover, .signup-sub-hedaer-link:hover
+{
+    text-decoration: none;
+    color: #0abfaf;
+}
+
+.login input, .signup input
+{
+    width: 300px;
+    padding: 5px;
+}
+
+.login input[type="text"], input[type="password"], .signup input[type="text"], input[type="password"], .new-promotion-content, .new-promotion-label,
+.add-customer-input
+{
+    border: none;
+    border-bottom: 1px solid #d9d9d9;
+    font-family: 'Roboto', sans-serif;
+    font-size: 19px;
+    font-weight: 300;
+    color: #1c1a1a;
+    outline: none;
+}
+
+.new-promotion-label
+{
+    border-bottom: none;
+}
+
+::placeholder
+{
+    color: #6e6d6d;
+}
+
+.login input:hover, .signup input:hover
+{
+    border-bottom: 1px solid #1c1a1a;
+    transition: 1s;
+}
+
+.login input:active, .signup input:hover
+{
+    border-bottom: 1px solid #1c1a1a;
+}
+
+.login-button, .signup-button, #create-promotion, #add-customer-open-dialog, .delete-promotion
+{
+    outline: none;
+    font-size: 20px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    background: #0abfaf;
+    color: white;
+    border: 0.5px solid;
+    border-radius: 18px;
+    padding: 10px 40px;
+}
+
+.log-out-button
+{
+    outline: none;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    background: white;
+    color: #0abfaf;
+    border: 0.5px solid #0abfaf;
+    border-radius: 18px;
+    padding: 5px 20px;
+}
+
+.login-button:hover, .get_started:hover, .signup-button:hover, #create-promotion:hover, #view-more-button:hover, #add-customer-button:hover,
+#add-customer-open-dialog:hover
+{
+    cursor: pointer;
+    background: #0bd9c7;
+    transition: 0.5s;
+    outline: none;
+}
+
+.log-out-button:hover
+{
+    cursor: pointer;
+    background: #0abfaf;
+    color: white;
+    transition: 0.5s;
+    outline: none;
+}
+
+.password
+{
+    padding: 50px;
+}
+
+.open
+{
+    background: #AA0000;
+}
+
+.new-promotion
+{
+    display: flex;
+    justify-content: center;
+    text-align: left;
+}
+
+.new-promotion-content, .new-promotion-label
+{
+    padding-left: 10px;
+}
+
+.purchases
+{
+    display: inline;
+}
+
+#reward-number
+{
+    width: 70px;
+    text-align: center;
+}
+
+#promotion-name
+{
+    width: 335px;
+}
+
+#rewards
+{
+    width: 320px;
+    border: 1px solid #d9d9d9;
+}
+
+.create-promotion-div
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align:center;
+    padding: 20px;
+}
+
+.new-promotion-header, .promotion-name-head
+{
+    text-align: center;
+    padding: 30px;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 200;
+}
+
+.my-promotions, .my-customers
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.promotion-name-head
+{
+    margin:0px;
+    padding:0px;
+    padding-top: 30px
+}
+
+.promotions-table, .customers-table
+{
+    border-collapse: collapse;
+    margin: 25px 0;
+    border-radius: 5px 5px 0 0;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0,0,0,0.15);
+}
+
+.promotions-table thead tr, .customers-table thead tr
+{
+    background-color: #0abfaf;
+    color: #ffffff;
+    text-align: left;
+}
+
+.promotions-table th, .promotions-table td, .customers-table th, .customers-table td
+{
+    padding: 12px 15px;
+}
+
+.promotions-table tbody tr, .customers-table tbody tr
+{
+    border-bottom: 1px solid #dddddd;
+    text-align: left;
+}
+
+.promotions-table tbody tr:nth-of-type(even), .customers-table tbody tr:nth-of-type(even)
+{
+    background-color: #f3f3f3;
+}
+
+.promotions-table tbody tr:last-of-type, .customers-table tbody tr:last-of-type
+{
+    border-bottom: 2px solid #0abfaf;
+}
+
+.my-promotions-head, .add-customer-title
+{
+    text-align: center;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 200;
+    padding-top:30px;
+}
+
+#view-more-button
+{
+    outline: none;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    background: #0abfaf;
+    color: white;
+    border: 0.5px solid;
+    border-radius: 18px;
+    padding: 5px 20px;
+}
+
+.add-customer-modal
+{
+    width: 500px;
+    height: 355px;
+    background-color:white;
+    border-radius: 5px;
+    text-align: center;
+    padding: 5px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+    display: none;
+}
+
+#overlay
+{
+    position: fixed;
+    /* opacity: 0; */
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: rgba(0,0,0,0.7);
+    display: none;
+}
+
+.add-customer-title
+{
+    padding: 25px;
+}
+
+.add-customer-close
+{
+    position:absolute;
+    top: 0;
+    right: 14px;
+    font-size: 45px;
+    transform: rotate(45deg);
+    cursor: pointer;
+}
+
+.add-customer-close:hover
+{
+    cursor: pointer;
+    color: #0bd9c7;
+    outline: none;
+}
+
+#add-customer-button
+{
+    outline: none;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    background: #0abfaf;
+    color: white;
+    border: 0.5px solid;
+    border-radius: 18px;
+    padding: 10px 20px;
+}
+
+.add-customer-input
+{
+    width: 315px;
+}
+
+.add-customer-open-dialog-button
+{
+    text-align: center;
+}
+
+.view-more-promo-dates
+{
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    padding-top:30px;
+}
+
+.enter-sale-input
+{
+    border: none;
+    border-bottom-style: solid;
+    border-bottom-color: #dddddd;
+    border-bottom-width: 1px;
+    width: 230px;
+    padding-left: 5px;
+    outline: none;
+}
+
+#sales-price-label
+{
+    padding-right: 10px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 19px;
+    font-weight: 300;
+    color: #1c1a1a;
+}
+
+#enter-sale, .enter-sale-input
+{
+    font-family: 'Roboto', sans-serif;
+    font-size: 19px;
+    font-weight: 300;
+    color: #1c1a1a;
+}
+
+#customer-email-list
+{
+    width: 300px;
+}
+
+#sale-price
+{
+    width: 150px
+}
+
+.add-customer-open-dialog-button
+{
+    padding-bottom: 15px;
+}
+
+.delete-promotion
+{
+    background: #ff596c;
+}
+
+.delete-promotion:hover
+{
+    cursor: pointer;
+    background: #d94e5e;
+    transition: 0.5s;
+    outline: none;
+}
+
+.empty
+{
+    font-family: 'Roboto', sans-serif;
+    font-size: 19px;
+    font-weight: 400;
+    color: #1c1a1a;
+    padding: 30px;
+    text-align: center;
+}
+
+.empty-text
+{
+    padding-top: 10px;
+}
+
+.travolta
+{
+    height: 339px;
+    width: 600px;
+}
+
+.sales-graph
+{
+    display: block;
+    margin-left: 26%;
+    margin-right: auto;
+    width: 45%;
+}
