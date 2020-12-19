@@ -14,6 +14,7 @@ import calendar
 # Create a secret key
 app=Flask(__name__)
 app.config['SECRET_KEY'] = "_2f!qX3n^DP-2s@R"
+app.config['SEND_FILE_MAX_AGE_DEFAULT'] = 0
 
 # Connect to SQL server
 db = SQL("sqlite:///LoyalT.db")
