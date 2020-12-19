@@ -1,7 +1,8 @@
 # loyalT
 CS50 Final Project - LoyalT
 
-Video demonstration: https://www.youtube.com/watch?v=iHQQfEDr6ko&ab_channel=MichaelT
+Video demonstration: https://www.youtube.com/watch?v=h-coB6yLzmY&feature=youtu.be&ab_channel=MichaelT
+Live site: https://loyal-t.herokuapp.com/?
 
 For this project, I created a website that allows companies to set up and manage loyalty rewards programs 100% digitally without having to use loyalty 
 rewards cards. To get set up a company would create an account and then create a new rewards program.
