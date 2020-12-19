@@ -248,7 +248,7 @@ def viewmore(promoname):
                     plt.gcf().autofmt_xdate()
 
                     # Save plot as PNG
-                    plt.savefig("/home/ubuntu/web_project/static/new_plot.png", bbox_inches = 'tight')
+                    plt.savefig("static/plot.png", bbox_inches = 'tight')
 
                     # Get all customer names, customer emails, total amount they've spent, and total purcahses they've made for the specified promotion.
                     # If the transaction time of a sale for any customer is before the start date of the promotion, mark the transaction amount as $0 and
