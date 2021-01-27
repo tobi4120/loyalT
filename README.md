@@ -14,4 +14,4 @@ Once a program is created the company can enter all the customers associated wit
 amount every time a sale is made. The website will track how many purchases are associated with each customer and will let the business know when a customer has 
 won a reward.
 
-The website also comes with sales analytics to track the perfomance of the business's rewards programs.
+The website also comes with sales analytics to track the performance of the business's rewards programs.
